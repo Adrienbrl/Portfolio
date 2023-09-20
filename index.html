@@ -49,17 +49,18 @@
     <section id="projets">
         <h2>Projets</h2>
         <div class="filters">
-            <button class="all">Tous</button>
-            <button class="react">React</button>
-            <button class="javascript">JavaScript</button>
-            <button class="htmlcss">HTML/CSS</button>
+            <ul>
+                <li class="all active-tag">Tous</li>
+                <li data-gallery-tag="HTML/CSS">HTML/CSS</li>
+                <li data-gallery-tag="JavaScript">JavaScript</li>
+                <li data-gallery-tag="React">React</li>
+            </ul>
         </div>
         <div class="gallery">
-            <img src="./Frontend/assets/images/booki.webp" alt="Booki" class="active" loading="lazy" data-htmlcss>
-            <img src="./Frontend/assets/images/sophie-bluel.webp" alt="SophieBluel" class="active" loading="lazy" data-javascript>
-            <img src="./Frontend/assets/images/carducci.webp" alt="Carducci" class="active" loading="lazy" data-htmlcss
-            data-javascript>
-            <img src="./Frontend/assets/images/kasa.webp" alt="Kasa" class="active" loading="lazy" data-react>
+            <img data-gallery-tag="HTML/CSS" class="gallery-item" src="./Frontend/assets/images/booki.webp" alt="Booki"  loading="lazy">
+            <img data-gallery-tag="JavaScript" class="gallery-item" src="./Frontend/assets/images/sophie-bluel.webp" alt="SophieBluel" class="active" loading="lazy">
+            <img data-gallery-tag="JavaScript" class="gallery-item" src="./Frontend/assets/images/carducci.webp" alt="Carducci" class="active" loading="lazy">
+            <img data-gallery-tag="React" class="gallery-item" src="./Frontend/assets/images/kasa.webp" alt="Kasa" class="active" loading="lazy">
         </div>
     </section>
 
