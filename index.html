@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./Frontend/style.css">
+    <script defer src="./Frontend/assets/js/script.js"></script>
 </head>
 <body>
     <header>
@@ -18,7 +19,7 @@
                 </ul>
             </nav>
     </header>
-    <section class="intro">
+    <section id="intro">
         <div class="pres-profil">
             <div class="pres">
                 <h1>Bonjour à tous ! Je suis Développeur Front-end</h1>
@@ -37,12 +38,28 @@
             </ul>
         </div>
     </section>
-    <section class="about">
+    <section id="about">
         <h2>À propos</h2>
         <div class="about-txt">
             <p>Bonjour, je m'appelle Adrien Bruel, j'ai 21 ans et je suis un nouveau passionné de développement web. Laissez-moi vous raconter brièvement comment j'en suis arrivé là et pourquoi j'aime autant ce métier.</p>
             <p> Mon parcours a débuté en 2021 lorsque je me suis inscrit dans une école de digital pour apprendre le développement. Cependant je me suis rapidement rendu compte que seul ce domaine suscitait mon véritable intérêt. Par conséquent j'ai pris la décision d'arrêter cette école et de m'engager dans une formation entièrement dédier au développement web. Heureusement, cette décision s'est avérée être la bonne, car aujourd'hui je suis convaincu que c'est vraiment ce que je veux faire !</p>
             <p> Les raisons pour lesquelles j'ai choisi le développement web ? Ce qui me passionne par-dessus tout dans ce métier, c'est la possibilité d'obtenir un retour instantané sur mon travail, de voir directement comment mon code prend vie sur une page web. J'adore concevoir, créer, innvoer et concrétiser des projets web.</p>
+        </div>
+    </section>
+    <section id="projets">
+        <h2>Projets</h2>
+        <div class="filters">
+            <button class="all">Tous</button>
+            <button class="react">React</button>
+            <button class="javascript">JavaScript</button>
+            <button class="htmlcss">HTML/CSS</button>
+        </div>
+        <div class="gallery">
+            <img src="./Frontend/assets/images/booki.webp" alt="Booki" class="active" loading="lazy" data-htmlcss>
+            <img src="./Frontend/assets/images/sophie-bluel.webp" alt="SophieBluel" class="active" loading="lazy" data-javascript>
+            <img src="./Frontend/assets/images/carducci.webp" alt="Carducci" class="active" loading="lazy" data-htmlcss
+            data-javascript>
+            <img src="./Frontend/assets/images/kasa.webp" alt="Kasa" class="active" loading="lazy" data-react>
         </div>
     </section>
 
