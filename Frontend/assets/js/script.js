@@ -10,12 +10,13 @@ for (let filter of filtersGallery) {
         filter.classList.add("active-tag");
         for (let image of imageGallery) {
             if (
-                filter.getAttribute("data-gallery-tag") === image.getAttribute("data-gallery-tag") || filter === all
+                image.getAttribute("data-gallery-tag").includes(filter.getAttribute("data-gallery-tag")) || filter === all
             ) {
                 image.style.display = "block";
             } else {
-                image.style.display = "none"
+                image.style.display = "none";
             }
+            
         }
 
     })

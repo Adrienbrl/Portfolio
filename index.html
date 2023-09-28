@@ -1,49 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./Frontend/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script defer src="./Frontend/assets/js/script.js"></script>
+    <script defer src="https://kit.fontawesome.com/f3113c6473.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <a class="avatar" href="./index.html"><img src="" alt="Avatar"></a>
+        <a class="logo" href="./index.html"><img src="./Frontend/assets/images/avatar.webp" alt="Avatar"></a>
             <nav>
                 <ul>
-                    <li><a href="#À propos"></a>À propos</li>
-                    <li><a href="#Compétences"></a>Compétences</li>
-                    <li><a href="#Projets"></a>Projets</li>
-                    <li><a href="#Me contacter"></a>Me Contacter</li>
+                    <li><a href="#a propos"></a>À propos</li>
+                    <li><a href="#competences"></a>Compétences</li>
+                    <li><a href="#projets"></a>Projets</li>
+                    <li><a href="#me contacter"></a>Me contacter</li>
                 </ul>
             </nav>
     </header>
     <section id="intro">
         <div class="pres-profil">
             <div class="pres">
-                <h1>Bonjour à tous ! Je suis Développeur Front-end</h1>
-                <p>Il y a deux ans, j'ai fait la découverte du développement web, et dès ce moment-là, j'ai su que c'était ma véritable passion et que c'était ce que je voulais faire.</p>
+                <h1>Bonjour ! Je suis Développeur Front-end 💻</h1>
+                <p>Je m'appelle Adrien Bruel et bienvenue à tous sur mon portfolio 👋🏼. Il y a deux ans, j'ai fait la découverte du développement web, et dès ce moment-là, j'ai su que c'était ma véritable passion et que c'était ce que je voulais faire.</p>
             </div>
             <div class="profil">
-                <img src="" alt="">
+                <img src="./Frontend/assets/images/illustration-sans-bordure.png" alt="Avatar">
             </div>
         </div>
         <div class="reseaux">
             <p>Rejoignez-moi sur :</p>
             <ul>
-                <li><a title="GitHub" href=""></a></li>
-                <li><a title="Instagram" href=""></a></li>
-                <li><a title="LinkedIn" href=""></a></li>
+                <li><a href="https://github.com/Adrienbrl" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/adrien-bruel-659b83292/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
             </ul>
         </div>
     </section>
     <section id="about">
         <h2>À propos</h2>
         <div class="about-txt">
-            <p>Bonjour, je m'appelle Adrien Bruel, j'ai 21 ans et je suis un nouveau passionné de développement web. Laissez-moi vous raconter brièvement comment j'en suis arrivé là et pourquoi j'aime autant ce métier.</p>
-            <p> Mon parcours a débuté en 2021 lorsque je me suis inscrit dans une école de digital pour apprendre le développement. Cependant je me suis rapidement rendu compte que seul ce domaine suscitait mon véritable intérêt. Par conséquent j'ai pris la décision d'arrêter cette école et de m'engager dans une formation entièrement dédier au développement web. Heureusement, cette décision s'est avérée être la bonne, car aujourd'hui je suis convaincu que c'est vraiment ce que je veux faire !</p>
-            <p> Les raisons pour lesquelles j'ai choisi le développement web ? Ce qui me passionne par-dessus tout dans ce métier, c'est la possibilité d'obtenir un retour instantané sur mon travail, de voir directement comment mon code prend vie sur une page web. J'adore concevoir, créer, innvoer et concrétiser des projets web.</p>
+            <p>Bonjour, je m'appelle Adrien Bruel, j'ai 21 ans et je suis un <strong>nouveau passionné</strong> de développement web. Laissez-moi vous raconter brièvement comment j'en suis arrivé là et pourquoi j'aime autant ce métier.</p><br>
+            <p> Mon parcours a débuté en 2021 lorsque je me suis inscrit dans une école de digital pour apprendre le développement. Cependant je me suis rapidement rendu compte que seul ce domaine suscitait mon <strong>véritable intérêt</strong>. Par conséquent j'ai pris la décision d'arrêter cette école et de m'engager dans une formation entièrement dédier au développement web. Heureusement, cette décision s'est avérée être la bonne, car aujourd'hui je suis convaincu que c'est vraiment ce que je veux faire !</p><br>
+            <p> Les raisons pour lesquelles j'ai choisi le développement web ? Ce qui me passionne par-dessus tout dans ce métier, c'est la possibilité d'obtenir un retour instantané sur mon travail, de voir directement comment mon code prend vie sur une page web. J'adore <strong>concevoir, créer, innover</strong> et <strong>concrétiser</strong> des projets web.</p>
+        </div>
+    </section>
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <div class="skills">
+            <div class="langages">
+                <h3>Mes langages</h3>
+                <div class="langage-zone">
+                    <div class="langage-card">
+                        <i class="fab fa-html5"></i>
+                        <h4>HTML</h4>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <h4>CSS</h4>
+                        <i class="fa-brands fa-sass"></i>
+                        <h4>SASS</h4>
+                        <i class="fa-brands fa-square-js"></i>
+                        <h4>JavaScript</h4>
+                        <i class="fa-brands fa-react"></i>
+                        <h4>React</h4>
+                        <i class="fa-brands fa-node-js"></i>
+                        <h4>NodeJs</h4>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="projets">
@@ -57,10 +87,10 @@
             </ul>
         </div>
         <div class="gallery">
-            <img data-gallery-tag="HTML/CSS" class="gallery-item" src="./Frontend/assets/images/booki.webp" alt="Booki"  loading="lazy">
-            <img data-gallery-tag="JavaScript" class="gallery-item" src="./Frontend/assets/images/sophie-bluel.webp" alt="SophieBluel" class="active" loading="lazy">
-            <img data-gallery-tag="JavaScript" class="gallery-item" src="./Frontend/assets/images/carducci.webp" alt="Carducci" class="active" loading="lazy">
-            <img data-gallery-tag="React" class="gallery-item" src="./Frontend/assets/images/kasa.webp" alt="Kasa" class="active" loading="lazy">
+            <img data-gallery-tag="HTML/CSS" class="gallery-item" src="./Frontend/assets/images/booki.webp" alt="Booki" loading="lazy">
+            <img data-gallery-tag="JavaScript" class="gallery-item" src="./Frontend/assets/images/sophie-bluel.webp" alt="SophieBluel" loading="lazy">
+            <img data-gallery-tag="JavaScript HTML/CSS" class="gallery-item" src="./Frontend/assets/images/carducci.webp" alt="Carducci" loading="lazy">
+            <img data-gallery-tag="React" class="gallery-item" src="./Frontend/assets/images/kasa.webp" alt="Kasa" loading="lazy">
         </div>
     </section>
 
