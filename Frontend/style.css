@@ -112,7 +112,7 @@ header nav ul li {
 /* ----------- À PROPOS ----------- */
 
 #about {
-    padding: 130px 65px 50px;
+    padding: 130px 65px 170px;
 }
 
 #about h2 {
@@ -135,7 +135,8 @@ header nav ul li {
 /* ----------- COMPETENCES ----------- */
 
 #competences {
-    padding: 130px 65px 80px;
+    padding: 130px 65px 170px;
+    background-color: rgb(254, 255, 208);
 }
 
 #competences h2 {
@@ -148,13 +149,99 @@ header nav ul li {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     text-align: center;
-    margin-top: 0.5vw;
+    margin-top: 1vw;
 }
 
+.langage-outil {
+    display: flex;
+    margin-top: 5vw;
+}
 
+.langage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
 
+.langage h3 {
+    font-family: 'Lato', sans-serif;
+}
 
+.langage-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin-top: 2vw;
+    width: max-content;
+}
 
+.langage-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.langage-card div {
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.langage-card div i {
+    font-size: 30px;
+    color: rgb(96, 66, 118);
+}
+
+.langage-card h4 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+.outil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.outil h3 {
+    font-family: 'Lato', sans-serif;
+}
+
+.outil-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin-top: 2vw;
+    width: max-content;
+}
+
+.outil-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.outil-card div {
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outil-card div i {
+    font-size: 30px;
+    color: rgb(96, 66, 118);
+}
+
+.outil-card h4 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
 
 
 
