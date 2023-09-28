@@ -2,10 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*font-family: 'Lato', sans-serif;*/
-    font-family: 'Montserrat', sans-serif;
-
-
 }
 
 body, header {
@@ -54,6 +50,7 @@ header nav ul li {
     margin-left: 2.5vw;
     color: rgb(95, 81, 219);
     font-weight: 600;
+    font-family: 'Lato', sans-serif;
 }
 
 /* ----------- INTRO ----------- */
@@ -78,10 +75,12 @@ header nav ul li {
 .pres h1 {
     font-size: 50px;
     margin-bottom: 1vw;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .pres p {
     font-size: 18px;
+    font-family: 'Lato', sans-serif;
 }
 
 .profil {
@@ -102,6 +101,7 @@ header nav ul li {
 .reseaux p {
     font-size: 18px;
     margin-bottom: 1vw;
+    font-family: 'Lato', sans-serif;
 }
 
 .reseaux i {
@@ -119,11 +119,13 @@ header nav ul li {
     text-align: center;
     font-size: 35px;
     margin-bottom: 2vw;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .about-txt {
     text-align: center;
     font-size: 18px;
+    font-family: 'Lato', sans-serif;
 }
 
 .about-txt strong {
@@ -139,23 +141,14 @@ header nav ul li {
 #competences h2 {
     font-size: 35px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.skills {
-    background-color: rgb(254, 255, 208);
-    margin-top: 2vw;
-}
-
-.langages h3 {
+#competences p {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
     text-align: center;
-    font-size: 25px;
-    padding-top: 1.5vw;
-}
-
-.langage-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
+    margin-top: 0.5vw;
 }
 
 
