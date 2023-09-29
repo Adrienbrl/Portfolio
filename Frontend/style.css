@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body, header {
     margin: 0 auto;
     max-width: 1500px;
@@ -72,15 +78,76 @@ header nav ul li {
     width: 60%;
 }
 
+/* ----------- ANIMATION TITRE ----------- */
+
 .pres h1 {
-    font-size: 50px;
-    margin-bottom: 1vw;
+    text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    color: transparent;
+    font-size: 0px;
 }
+
+.pres h1 span {
+     display: inline-block;
+     position: relative;
+     overflow: hidden;
+     font-size: 40px;
+}
+
+h1 span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.pres h1:nth-child(1) {
+    animation: txt-appearance 0s 1s forwards;
+}
+
+.pres h1:nth-child(2) {
+    animation: txt-appearance 0s 1.25s forwards;
+}
+
+.pres h1:nth-child(1) span::after {
+    background: rgb(95, 81, 219);
+    animation: slide-in 0.55s ease-out forwards, slide-out 0.30s 1s ease-out forwards;
+}
+
+.pres h1:nth-child(2) span::after {
+    background: rgb(96, 66, 118);
+    animation: slide-in 0.55s 0.3s ease-out forwards, slide-out 0.30s 1.3s ease-out forwards;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes txt-appearance {
+    100% {
+        color: #000000;
+    }
+}
+
+/* ----------- FIN ANIMATION TITRE ----------- */
 
 .pres p {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
+    margin-top: 2vw;
 }
 
 .profil {
@@ -243,86 +310,34 @@ header nav ul li {
     font-size: 16px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ----------- PROJETS ----------- */
+
+#projets {
+    padding: 130px 65px 170px;
+}
+
+#projets h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    text-align: center;
+}
+
+#projets ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    cursor: pointer;
+    gap: 100px;
+    margin-top: 2vw;
+}
+
+.gallery {
+    margin-top: 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
 
 .gallery img {
     width: 30%
