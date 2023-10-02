@@ -13,16 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script defer src="./Frontend/assets/js/script.js"></script>
     <script defer src="https://kit.fontawesome.com/f3113c6473.js" crossorigin="anonymous"></script>
+    <title>Portfolio - BRUEL Adrien</title>
 </head>
 <body>
     <header>
         <a class="logo" href="./index.html"><img src="./Frontend/assets/images/avatar.webp" alt="Avatar"></a>
             <nav>
                 <ul>
-                    <li><a href="#a propos"></a>À propos</li>
+                    <li><a href="#apropos"></a>À propos</li>
                     <li><a href="#competences"></a>Compétences</li>
                     <li><a href="#projets"></a>Projets</li>
-                    <li><a href="#me contacter"></a>Me contacter</li>
+                    <li><a href="#mecontacter"></a>Me contacter</li>
                 </ul>
             </nav>
     </header>
@@ -147,17 +148,43 @@
     </section>
     <section id="projets">
         <h2>Projets</h2>
+        <div class="filters">
             <ul>
                 <li class="all active-tag">Tous</li>
-                <li data-gallery-tag="HTML/CSS">HTML/CSS</li>
+                <li data-gallery-tag="Html&Css">Html&Css</li>
                 <li data-gallery-tag="JavaScript">JavaScript</li>
                 <li data-gallery-tag="React">React</li>
             </ul>
+        </div>
         <div class="gallery">
-            <img data-gallery-tag="HTML/CSS" class="gallery-item" src="./Frontend/assets/images/booki.webp" alt="Booki" loading="lazy">
-            <img data-gallery-tag="JavaScript" class="gallery-item" src="./Frontend/assets/images/sophie-bluel.webp" alt="SophieBluel" loading="lazy">
-            <img data-gallery-tag="JavaScript HTML/CSS" class="gallery-item" src="./Frontend/assets/images/carducci.webp" alt="Carducci" loading="lazy">
-            <img data-gallery-tag="React" class="gallery-item" src="./Frontend/assets/images/kasa.webp" alt="Kasa" loading="lazy">
+            <div class="gallery-item">
+            <img data-gallery-tag="Html&Css" src="./Frontend/assets/images/booki.webp" alt="Booki" loading="lazy">
+            <div class="overlay">
+                <p>BOOKI</p>
+                <button>Voir plus</button>
+            </div>
+            </div>
+            <div class="gallery-item">
+            <img data-gallery-tag="JavaScript" src="./Frontend/assets/images/sophie-bluel.webp" alt="SophieBluel" loading="lazy">
+            <div class="overlay">
+                <p>Sophie Bluel</p>
+                <button>Voir plus</button>
+            </div>
+            </div>
+            <div class="gallery-item">
+            <img data-gallery-tag="JavaScript Html&Css" src="./Frontend/assets/images/carducci.webp" alt="Carducci" loading="lazy">
+            <div class="overlay">
+                <p>Nina Carducci</p>
+                <button>Voir plus</button>
+            </div>
+            </div>
+            <div class="gallery-item">
+            <img data-gallery-tag="React" src="./Frontend/assets/images/kasa.webp" alt="Kasa" loading="lazy">
+            <div class="overlay">
+                <p>KASA</p>
+                <button>Voir plus</button>
+            </div>
+            </div>
         </div>
     </section>
 

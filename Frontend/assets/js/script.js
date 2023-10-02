@@ -9,15 +9,12 @@ for (let filter of filtersGallery) {
         }
         filter.classList.add("active-tag");
         for (let image of imageGallery) {
-            if (
-                image.getAttribute("data-gallery-tag").includes(filter.getAttribute("data-gallery-tag")) || filter === all
-            ) {
-                image.style.display = "block";
-            } else {
-                image.style.display = "none";
-            }
-            
+            const tag = image.getAttribute("data-gallery-tag");
+            const shouldDisplay = tag.includes(filter.getAttribute("data-gallery-tag")) || filter === all;
+            image.style.display = shouldDisplay ? "block" : "none";
+            const galleryItem = image.parentElement; 
+            galleryItem.style.display = shouldDisplay ? "block" : "none";
         }
-
-    })
+    });
 }
+

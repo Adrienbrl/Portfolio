@@ -116,12 +116,12 @@ h1 span::after {
 
 .pres h1:nth-child(1) span::after {
     background: rgb(95, 81, 219);
-    animation: slide-in 0.55s ease-out forwards, slide-out 0.30s 1s ease-out forwards;
+    animation: slide-in 0.75s ease-out forwards, slide-out 0.75s 1s ease-out forwards;
 }
 
 .pres h1:nth-child(2) span::after {
     background: rgb(96, 66, 118);
-    animation: slide-in 0.55s 0.3s ease-out forwards, slide-out 0.30s 1.3s ease-out forwards;
+    animation: slide-in 0.75s 0.3s ease-out forwards, slide-out 0.75s 1.3s ease-out forwards;
 }
 
 @keyframes slide-in {
@@ -332,13 +332,77 @@ h1 span::after {
     margin-top: 2vw;
 }
 
+#projets ul li {
+    font-family: 'Lato', sans-serif;
+}
+
 .gallery {
     margin-top: 2vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 25px;
+    width: 100%;
 }
 
-.gallery img {
-    width: 30%
+.gallery-item {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(95, 81, 219, 0.7);
+    transition: box-shadow 0.3s ease; 
+    position: relative;
+    overflow: hidden; 
 }
+
+.gallery-item:hover {
+    box-shadow: 0px 0px 20px rgba(95, 81, 219, 0.7); 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: none; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.gallery-item:hover .overlay {
+    display: flex; 
+}
+
+.overlay p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.overlay button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.overlay button:hover {
+    background-color: white;
+    color: #333; /* Couleur du texte au survol */
+}
+
+
+.gallery img {
+    max-width: 100%;
+    height: auto; 
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
