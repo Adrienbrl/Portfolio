@@ -44,20 +44,51 @@ header .logo img {
     width: 100%;
 }
 
-header nav ul {
+nav {
+    
+    padding: 0 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-}
-
-header nav ul li {
-    cursor: pointer;
-    margin-left: 2.5vw;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .nav-item {
     color: rgb(95, 81, 219);
-    font-weight: 600;
     font-family: 'Lato', sans-serif;
-}
+    padding: 1vw;
+    margin: 0 0.5vw;
+    position: relative;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  
+  .nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    background-color: rgb(70, 51, 21);
+    height: 5px;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    left: 0;
+    transition: .3s;
+  }
+  
+  .nav-item:not(.is-active):hover:before {
+    bottom: 0;
+  }
+  .nav-item:not(.is-active):hover {
+    color: rgb(70, 51, 21);
+  }
+  
+  .nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    transition: .4s;
+    border-radius: 8px 8px 0 0;
+  }
 
 /* ----------- INTRO ----------- */
 
@@ -204,110 +235,63 @@ h1 span::after {
 #competences {
     padding: 130px 65px 170px;
     background-color: rgb(254, 255, 208);
+    text-align: center;
 }
 
 #competences h2 {
     font-size: 35px;
-    text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 
 #competences p {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
-    text-align: center;
     margin-top: 1vw;
 }
 
 .langage-outil {
     display: flex;
+    justify-content: space-around;
     margin-top: 5vw;
 }
 
-.langage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
+.langage, .outil {
+    width: 40%;
+    text-align: center;
 }
 
-.langage h3 {
+.langage h3, .outil h3 {
     font-family: 'Lato', sans-serif;
 }
 
-.langage-container {
+.langage-container, .outil-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
-    margin-top: 2vw;
-    width: max-content;
+    margin-top: 3vw;
 }
 
-.langage-card {
-    position: relative;
-    cursor: pointer;
-}
-
-.langage-card div {
-    height: 100px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.langage-card div i {
+.langage-card div, .outil-card i {
     font-size: 30px;
-    color: rgb(96, 66, 118);
+    color: #fff;
 }
 
-.langage-card h4 {
-    text-align: center;
+.langage-card h4, .outil-card h4 {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    margin-top: 1vw;
 }
 
-.outil {
+.circle-icon {
+    border-radius: 50%;
+    background-color: rgb(70, 51, 21);
+    width: 3.8vw;
+    height: 3.8vw;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-}
-
-.outil h3 {
-    font-family: 'Lato', sans-serif;
-}
-
-.outil-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-    margin-top: 2vw;
-    width: max-content;
-}
-
-.outil-card {
-    position: relative;
-    cursor: pointer;
-}
-
-.outil-card div {
-    height: 100px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.outil-card div i {
-    font-size: 30px;
-    color: rgb(96, 66, 118);
-}
-
-.outil-card h4 {
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 /* ----------- PROJETS ----------- */
