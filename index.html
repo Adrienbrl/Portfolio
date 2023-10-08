@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - BRUEL Adrien</title>
     <link rel="stylesheet" href="./Frontend/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,19 +13,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script defer src="./Frontend/assets/js/script.js"></script>
     <script defer src="https://kit.fontawesome.com/f3113c6473.js" crossorigin="anonymous"></script>
-    <title>Portfolio - BRUEL Adrien</title>
+    <link rel="shortcut icon" href="./Frontend/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./Frontend/assets/icons/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <a class="logo" href="./index.html"><img src="./Frontend/assets/images/avatar.webp" alt="Avatar"></a>
         <nav>
-            <a href="#" class="nav-item is-active" data-active-color="rgb(70, 51, 21)" data-target="Intro">Intro</a>
-            <a href="#" class="nav-item is-active" data-active-color="rgb(96, 66, 118)" data-target="À propos">À propos</a>
-            <a href="#" class="nav-item" data-active-color="rgb(70, 51, 21)" data-target="Compétences">Compétences</a>
-            <a href="#" class="nav-item" data-active-color="rgb(96, 66, 118)" data-target="Projets">Projets</a>
+            <a href="#intro" class="nav-item is-active" data-active-color="rgb(70, 51, 21)" data-target="Intro">Intro</a>
+            <a href="#about" class="nav-item is-active" data-active-color="rgb(96, 66, 118)" data-target="À propos">À propos</a>
+            <a href="#competences" class="nav-item" data-active-color="rgb(70, 51, 21)" data-target="Compétences">Compétences</a>
+            <a href="#projets" class="nav-item" data-active-color="rgb(96, 66, 118)" data-target="Projets">Projets</a>
             <a href="#" class="nav-item" data-active-color="rgb(70, 51, 21)" data-target="Me contacter">Me contacter</a>
             <span class="nav-indicator"></span>
           </nav>
+          <div class="scroll-indicator"></div>
     </header>
     <section id="intro">
         <div class="pres-profil">
@@ -184,6 +187,38 @@
                 <p>KASA</p>
                 <button>Voir plus</button>
             </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contactez-moi 📧</h2>
+        <p>N'hésitez pas à m'écrire via ce formulaire ou bien par <a href="#">mail</a></p>
+        <div class="contact-container">
+            <div class="contact-illustration">
+                <img src="./Frontend/assets/images/boite_aux_lettres_illu.webp" alt="Boîte aux lettres">
+            </div>
+            <div class="contact-formulaire">
+                <form class="formulaire" action="#contact" method="post">
+                    <div class="names-container">
+                        <label for="lastname">Nom</label>
+                        <input type="text" id="lastname" placeholder="Votre nom">
+                        <label for="firstname">Prénom</label>
+                        <input type="text" id="firstname" placeholder="Votre prénom">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Votre email">
+                    </div>
+                    <div>
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" placeholder="Votre sujet">
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <input type="text" id="message" placeholder="Votre message">
+                    </div>
+                    <button class="submit" type="submit"><i class="fa-solid fa-paper-plane"></i>Envoyer</button>
+                </form>
             </div>
         </div>
     </section>

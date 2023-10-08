@@ -1,4 +1,4 @@
-const filtersGallery = document.querySelectorAll("#projets .filters ul li");
+const filtersGallery = document.querySelectorAll("#projets ul li");
 const imageGallery = document.querySelectorAll("#projets .gallery img");
 const all = document.querySelector(".all");
 
@@ -19,6 +19,7 @@ for (let filter of filtersGallery) {
         }
     });
 }
+
 
 
 
@@ -53,4 +54,39 @@ items.forEach((item, index) => {
   });
   item.classList.contains('is-active') && handleIndicator(item);
 });
+
+
+
+
+
+
+const scrollIndicator = document.querySelector(".scroll-indicator");
+const body = document.querySelector("body");
+
+const observer = new IntersectionObserver(handleIntersect)
+
+observer.observe(body)
+
+function handleIntersect(entries){
+  const el = entries[0];
+  if(el.isIntersecting){
+    window.addEventListener("scroll", indicatorAnimation)
+  } else if(!el.isIntersecting) {
+    window.removeEventListener("scroll", indicatorAnimation)
+  }
+}
+
+
+function indicatorAnimation() {
+
+  if(window.scrollY > body.offsetTop) {
+    const percentage = ((window.scrollY - body.offsetTop) / body.scrollHeight * 100).toFixed(2);
+    scrollIndicator.style.transform = `scaleX(${(percentage / 100)})`
+  } else {
+    scrollIndicator.style.transform = "scaleX(0)"
+  }
+}
+
+
+
 

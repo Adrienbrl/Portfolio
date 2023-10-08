@@ -16,6 +16,10 @@ body, header {
     min-width: 340px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
@@ -45,14 +49,13 @@ header .logo img {
 }
 
 nav {
-    
     padding: 0 20px;
     display: flex;
     overflow: hidden;
     position: relative;
-  }
+}
   
-  .nav-item {
+.nav-item {
     color: rgb(95, 81, 219);
     font-family: 'Lato', sans-serif;
     padding: 1vw;
@@ -60,9 +63,9 @@ nav {
     position: relative;
     text-decoration: none;
     font-weight: 900;
-  }
+}
   
-  .nav-item:before {
+.nav-item:before {
     content: "";
     position: absolute;
     bottom: -6px;
@@ -72,23 +75,36 @@ nav {
     border-radius: 8px 8px 0 0;
     left: 0;
     transition: .3s;
-  }
+}
   
-  .nav-item:not(.is-active):hover:before {
+.nav-item:not(.is-active):hover:before {
     bottom: 0;
-  }
-  .nav-item:not(.is-active):hover {
+}
+
+.nav-item:not(.is-active):hover {
     color: rgb(70, 51, 21);
-  }
+}
   
-  .nav-indicator {
+.nav-indicator {
     position: absolute;
     left: 0;
     bottom: 0;
     height: 5px;
     transition: .4s;
     border-radius: 8px 8px 0 0;
-  }
+}
+
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    transform-origin: left;
+    transform: scaleX(0);
+    background: rgb(95, 81, 219);
+    transition: transform 0.2s ease-out;
+}
+
 
 /* ----------- INTRO ----------- */
 
@@ -267,13 +283,13 @@ h1 span::after {
 .langage-container, .outil-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
+    grid-gap: 30px;
     margin-top: 3vw;
 }
 
 .langage-card div, .outil-card i {
     font-size: 30px;
-    color: #fff;
+    color: rgb(95, 81, 219);
 }
 
 .langage-card h4, .outil-card h4 {
@@ -284,7 +300,7 @@ h1 span::after {
 
 .circle-icon {
     border-radius: 50%;
-    background-color: rgb(70, 51, 21);
+    background-color: rgb(255, 255, 255);
     width: 3.8vw;
     height: 3.8vw;
     display: flex;
@@ -293,6 +309,15 @@ h1 span::after {
     margin: 0 auto;
     cursor: pointer;
 }
+
+.langage-card, .outil-card {
+    border: 1.5px solid rgb(0, 0, 0); 
+    box-shadow: 7px 5px rgba(22, 17, 12);
+    border-radius: 8px;
+    padding: 1vw;
+    margin: 0.5vw;
+}
+
 
 /* ----------- PROJETS ----------- */
 
@@ -306,19 +331,37 @@ h1 span::after {
     text-align: center;
 }
 
-#projets ul {
+.filters {
     display: flex;
-    align-items: center;
     justify-content: center;
-    list-style: none;
-    cursor: pointer;
-    gap: 100px;
-    margin-top: 2vw;
+    align-items: center;
 }
 
-#projets ul li {
-    font-family: 'Lato', sans-serif;
+.filters ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    gap: 70px;
+    margin-top: 2vw;
+    border: 1px solid rgb(95, 81, 219);
+    border-radius: 30px;
+    padding: 10px;
 }
+
+.filters li{
+    font-family: 'Lato', sans-serif;
+    padding: 5px 15px;
+    color: rgb(95, 81, 219);
+}
+
+.filters li.active-tag {
+    color: rgb(255, 255, 255);
+    background-color: rgb(95, 81, 219);
+    border-radius: 30px;
+}
+
 
 .gallery {
     margin-top: 2vw;
@@ -339,8 +382,20 @@ h1 span::after {
     overflow: hidden; 
 }
 
+.gallery img {
+    max-width: 100%;
+    height: auto; 
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
 .gallery-item:hover {
     box-shadow: 0px 0px 20px rgba(95, 81, 219, 0.7); 
+}
+
+.gallery-item:hover .overlay {
+    display: flex; 
 }
 
 .overlay {
@@ -349,22 +404,20 @@ h1 span::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(39, 39, 39, 0.9); 
     display: none; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-}
-
-.gallery-item:hover .overlay {
-    display: flex; 
+    cursor: pointer;
 }
 
 .overlay p {
     font-size: 18px;
     margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
 }
 
 .overlay button {
@@ -378,15 +431,7 @@ h1 span::after {
 
 .overlay button:hover {
     background-color: white;
-    color: #333; /* Couleur du texte au survol */
+    color: #333; 
 }
 
-
-.gallery img {
-    max-width: 100%;
-    height: auto; 
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 10px;
-}
 
