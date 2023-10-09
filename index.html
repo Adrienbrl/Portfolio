@@ -197,31 +197,43 @@
             <div class="contact-illustration">
                 <img src="./Frontend/assets/images/boite_aux_lettres_illu.webp" alt="Boîte aux lettres">
             </div>
-            <div class="contact-formulaire">
-                <form class="formulaire" action="#contact" method="post">
-                    <div class="names-container">
+            <form class="formulaire" action="#contact" method="post">
+                <div class="name-container">
+                    <div class="name-input">
                         <label for="lastname">Nom</label>
-                        <input type="text" id="lastname" placeholder="Votre nom">
+                        <input required type="text" placeholder="Votre nom">
+                    </div>
+                    <div class="name-input">
                         <label for="firstname">Prénom</label>
-                        <input type="text" id="firstname" placeholder="Votre prénom">
+                        <input required type="text" placeholder="Votre prénom">
+                    </div>
+                </div>
+                <div class="other-inputs">
+                    <div>
+                        <label for="email">Email 📧</label>
+                        <input required type="text" placeholder="Votre email">
                     </div>
                     <div>
-                        <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="Votre email">
+                        <label for="subject">Sujet 📝</label>
+                        <input required type="text" placeholder="Votre sujet">
                     </div>
                     <div>
-                        <label for="subject">Sujet</label>
-                        <input type="text" id="subject" placeholder="Votre sujet">
+                        <label for="message">Message 📩</label>
+                        <textarea required name="message" id="message" placeholder="Ecrivez votre message"></textarea>
                     </div>
-                    <div>
-                        <label for="message">Message</label>
-                        <input type="text" id="message" placeholder="Votre message">
-                    </div>
-                    <button class="submit" type="submit"><i class="fa-solid fa-paper-plane"></i>Envoyer</button>
-                </form>
-            </div>
+                </div>
+                <button class="submit" type="submit">Envoyer<i class="fa-solid fa-paper-plane"></i></button>
+            </form>
         </div>
     </section>
-
+    <div class="share">
+        <ol>
+          <li><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-github fa-2x"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin-in fa-2x"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-discord fa-2x"></i></a></li>
+        </ol>
+        <div class="toggle"></div>
+      </div>
 </body>
 </html> 
