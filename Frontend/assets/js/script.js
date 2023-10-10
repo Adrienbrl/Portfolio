@@ -95,3 +95,27 @@ toggle.addEventListener('click', () => {
   shareBtn.classList.toggle('active');
 });
 
+
+// Récupérer la valeur du compteur depuis le stockage local
+let count = localStorage.getItem('likeCount');
+
+// Si count est null (première visite), initialiser à 0
+if (count === null) {
+    count = 0;
+}
+
+// Mettre à jour le texte du compteur
+likeCount.textContent = count;
+
+likeButton.addEventListener('click', () => {
+    // Incrémenter le compteur
+    count++;
+    
+    // Mettre à jour le texte du compteur
+    likeCount.textContent = count;
+
+    // Enregistrer la nouvelle valeur dans le stockage local
+    localStorage.setItem('likeCount', count);
+});
+
+
