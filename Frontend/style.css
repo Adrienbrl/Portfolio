@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -19,10 +22,6 @@ body, header {
 html {
     scroll-behavior: smooth;
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* ----------- HEADER ----------- */
 
@@ -133,7 +132,7 @@ nav {
 .pres h1 {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
-    color: #000000;
+    color: rgb(22, 17, 12);
     color: transparent;
     font-size: 0px;
 }
@@ -143,6 +142,7 @@ nav {
     position: relative;
     overflow: hidden;
     font-size: 40px;
+    color: rgb(22, 17, 12);
 }
 
 h1 span::after {
@@ -188,7 +188,7 @@ h1 span::after {
 
 @keyframes txt-appearance {
     100% {
-        color: #000000;
+        color: rgb(22, 17, 12);
     }
 }
 
@@ -198,6 +198,7 @@ h1 span::after {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     margin-top: 2vw;
+    color: rgb(22, 17, 12);
 }
 
 .profil {
@@ -219,6 +220,7 @@ h1 span::after {
     font-size: 18px;
     margin-bottom: 1vw;
     font-family: 'Lato', sans-serif;
+    color: rgb(22, 17, 12);
 }
 
 .reseaux i {
@@ -240,12 +242,14 @@ h1 span::after {
     font-size: 35px;
     margin-bottom: 2vw;
     font-family: 'Montserrat', sans-serif;
+    color: rgb(22, 17, 12);
 }
 
 .about-txt {
     text-align: center;
     font-size: 18px;
     font-family: 'Lato', sans-serif;
+    color: rgb(22, 17, 12);
 }
 
 .about-txt strong {
@@ -265,12 +269,14 @@ h1 span::after {
 #competences h2 {
     font-size: 35px;
     font-family: 'Montserrat', sans-serif;
+    color: rgb(22, 17, 12);
 }
 
 #competences p {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     margin-top: 1vw;
+    color: rgb(22, 17, 12);
 }
 
 .langage-outil {
@@ -287,6 +293,7 @@ h1 span::after {
 .langage h3, .outil h3 {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
+    color: rgb(22, 17, 12);
 }
 
 .langage-container, .outil-container {
@@ -305,6 +312,7 @@ h1 span::after {
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     margin-top: 1vw;
+    color: rgb(22, 17, 12);
 }
 
 .circle-icon {
@@ -339,6 +347,7 @@ h1 span::after {
     font-family: 'Montserrat', sans-serif;
     font-size: 35px;
     text-align: center;
+    color: rgb(22, 17, 12);
 }
 
 .filters {
@@ -371,7 +380,6 @@ h1 span::after {
     background-color: rgb(95, 81, 219);
     border-radius: 30px;
 }
-
 
 .gallery {
     margin-top: 2vw;
@@ -457,12 +465,14 @@ h1 span::after {
 #contact h2 {
     font-size: 35px;
     font-family: 'Montserrat', sans-serif;
+    color: rgb(22, 17, 12);
 }
 
 #contact p {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     margin-top: 1vw;
+    color: rgb(22, 17, 12);
 }
 
 .formulaire {
@@ -501,6 +511,9 @@ h1 span::after {
     text-align: left;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    color: rgb(22, 17, 12);
 }
 
 .name-input input {
@@ -524,6 +537,9 @@ h1 span::after {
 .other-inputs label {
     font-family: 'Lato', sans-serif;
     font-size: 18px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    color: rgb(22, 17, 12);
 }
 
 .other-inputs input {
@@ -548,13 +564,25 @@ h1 span::after {
 }
 
 .submit {
-    margin-top: 3vw;
+    padding: 10px;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    border: 1px solid rgb(95, 81, 219);
+    letter-spacing: 1.5px;
+    color: rgb(22, 17, 12);
+    background-color: #fff;
+    border: none;
     border-radius: 30px;
-    padding: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
     cursor: pointer;
+    margin-top: 2vw;
+    }
+
+.submit:hover {
+    background-color: rgb(95, 81, 219);
+    box-shadow: 0px 15px 20px rgba(95, 81, 219, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
 }
 
 .submit i {
@@ -682,5 +710,9 @@ footer span {
     font-family: 'Lato', sans-serif;
     font-size: 12px;
 }
+
+
+
+
 
 

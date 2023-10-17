@@ -196,7 +196,7 @@
             <div class="contact-illustration">
                 <img src="./Frontend/assets/images/boite_aux_lettres_illu.webp" alt="Boîte aux lettres">
             </div>
-            <form class="formulaire" action="#contact" method="post">
+            <form class="formulaire" name="contact" method="POST">
                 <div class="name-container">
                     <div class="name-input">
                         <label for="lastname">Nom</label>
@@ -214,11 +214,11 @@
                     </div>
                     <div>
                         <label for="subject">Sujet 📝</label>
-                        <input required type="text" placeholder="Votre sujet">
+                        <input required type="text" placeholder="Intitulé de votre sujet">
                     </div>
                     <div>
                         <label for="message">Message 📩</label>
-                        <textarea required name="message" id="message" placeholder="Ecrivez votre message"></textarea>
+                        <textarea required name="message" id="message" placeholder="Votre message"></textarea>
                     </div>
                 </div>
                 <button class="submit" type="submit">Envoyer<i class="fa-solid fa-paper-plane"></i></button>
@@ -237,5 +237,6 @@
     <footer>
         <span>© 2023 - Développer par BRUEL Adrien</span>
     </footer>
+    
 </body>
 </html> 
