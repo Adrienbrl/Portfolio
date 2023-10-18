@@ -611,12 +611,6 @@ h1 span::after {
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    margin-right: 7vw;
-    transition: all 0.3s ease 0s;
-}
-
-.toggle:hover {
-    transform: translateY(-7px);
 }
 
 .toggle::before {
@@ -629,24 +623,25 @@ h1 span::after {
     font-weight: 900;
     text-align: center;
     line-height: 50px;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .share.active .toggle::before {
     content: '\f00d';
-    font-size: 2rem;
+    font-size: 20px;
 }
 
 .share {
     position: fixed;
     bottom: 70px;
-    right: 70px;
+    left: 70px;
 }
 
 .share ol {
     position: absolute;
     width: 50px;
     height: 50px;
+    font-size: 12px;
 }
 
 .share ol li {
@@ -658,18 +653,26 @@ h1 span::after {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: all .3s;
     opacity: 0;
     border: 1px solid rgb(70, 51, 21);
+}
+
+.share ol li:hover {
+    background: rgb(70, 51, 21); 
 }
 
 .share ol li a {
     color: rgb(70, 51, 21);
 }
 
+.share ol li:hover a {
+    color: white; 
+}
+
+
 .share.active ol li {
     opacity: 1;
-    transition: all .3s;
+    transition: opacity 0.2s, transform 0.2s;
 }
 
 .share.active ol li:nth-child(1) {
@@ -693,6 +696,35 @@ h1 span::after {
 }
 
 /* ----------- BOUTON RESEAUX OFF ----------- */
+
+/* ----------- BOUTON TO THE TOP ----------- */
+
+.to-the-top {
+    height: 50px;
+    width: 50px;
+    background: rgb(96, 66, 118);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.to-the-top:hover {
+    transform: translateY(-7px);
+}
+
+.to-the-top i {
+    color: white;
+    font-size: 20px;
+}
+
+
+/* ----------- BOUTON TO THE TOP OFF ----------- */
 
 /* ----------- FOOTER ----------- */
 
