@@ -226,6 +226,11 @@ h1 span::after {
 .reseaux i {
     color: rgb(95, 81, 219);
     padding-right: 1vw;
+    transition: all 0.3s ease 0s;
+}
+
+.reseaux i:hover {
+    transform: translateY(-7px);
 }
 
 
@@ -273,7 +278,7 @@ h1 span::after {
 }
 
 #competences p {
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Lato', sans-serif;
     margin-top: 1vw;
     color: rgb(22, 17, 12);
@@ -324,7 +329,6 @@ h1 span::after {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    cursor: pointer;
 }
 
 .langage-card, .outil-card {
@@ -469,10 +473,19 @@ h1 span::after {
 }
 
 #contact p {
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Lato', sans-serif;
     margin-top: 1vw;
     color: rgb(22, 17, 12);
+}
+
+#contact a {
+    color: rgb(95, 81, 219);
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
 }
 
 .formulaire {
@@ -522,7 +535,7 @@ h1 span::after {
     font-size: 14px;
     border-radius: 30px;
     border: 1px solid rgb(95, 81, 219);
-    padding: 10px;
+    padding: 15px;
     margin-top: 10px;
 }
 
@@ -548,7 +561,7 @@ h1 span::after {
     font-size: 14px;
     border-radius: 30px;
     border: 1px solid rgb(95, 81, 219);
-    padding: 10px;
+    padding: 15px;
     margin-top: 10px;
 }
 
@@ -599,6 +612,11 @@ h1 span::after {
     cursor: pointer;
     position: relative;
     margin-right: 7vw;
+    transition: all 0.3s ease 0s;
+}
+
+.toggle:hover {
+    transform: translateY(-7px);
 }
 
 .toggle::before {
@@ -683,35 +701,11 @@ footer {
     text-align: center; 
 }
 
-.footer-nav {
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    padding: 0 20px;
-    border-radius: 40px;
-    box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
-    display: flex;
-    overflow: hidden;
-    overflow-x: auto;
-    position: relative;
-    width: 50%;
-    margin: 0 auto; 
-    margin-bottom: 2vw;
-}
-
-footer p {
-    margin-top: 2vw;
+footer span, footer p {
     font-family: 'Lato', sans-serif;
+    padding: 10px;
     font-size: 14px;
 }
-
-footer span {
-    margin-top: 20px;
-    font-family: 'Lato', sans-serif;
-    font-size: 12px;
-}
-
-
 
 
 
