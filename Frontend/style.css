@@ -97,13 +97,13 @@ nav {
 .scroll-indicator {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 96.8%;
     height: 3px;
     transform-origin: left;
     transform: scaleX(0);
-    background: rgb(95, 81, 219);
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(95, 81, 219));
     transition: transform 0.2s ease-out;
-    display: none;
+    z-index: 5;
 }
 
 /* ----------- HEADER OFF ----------- */
@@ -402,6 +402,7 @@ h1 span::after {
     transition: box-shadow 0.3s ease; 
     position: relative;
     overflow: hidden; 
+    border-radius: 30px;
 }
 
 .gallery img {
@@ -409,7 +410,6 @@ h1 span::after {
     height: auto; 
     object-fit: cover;
     cursor: pointer;
-    border-radius: 10px;
 }
 
 .gallery-item:hover {
@@ -444,17 +444,61 @@ h1 span::after {
 
 .overlay button {
     background-color: transparent;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid rgb(242, 242, 245);
+    color: rgb(250, 250, 252);
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 30px;
+    margin-top: 1vw;
 }
 
 .overlay button:hover {
     background-color: white;
-    color: #333; 
+    color: rgb(22, 17, 12); 
+    border: none
 }
+
+/* Style de l'arrière-plan flou */
+.modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+    z-index: 1; /* S'assurer que l'arrière-plan est en premier plan */
+}
+
+/* Style des modales */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; /* Couleur de fond de la modale */
+    padding: 20px;
+    border-radius: 10px; /* Bordure arrondie */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    z-index: 2; 
+}
+
+.close-modal {
+    cursor: pointer;
+    color: #333;
+    background: #ddd;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    float: right;
+    margin-top: 5px;
+}
+
+
+
+
 
 /* ----------- PROJETS OFF ----------- */
 

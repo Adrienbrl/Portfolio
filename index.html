@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <div class="scroll-indicator"></div>
     <header>
         <a class="logo" href="./index.html"><img src="./Frontend/assets/images/avatar.webp" alt="Avatar"></a>
         <nav>
@@ -27,7 +28,6 @@
             <a href="#contact" class="nav-item" data-active-color="rgb(70, 51, 21)" data-target="Me contacter">Me contacter</a>
             <span class="nav-indicator"></span>
         </nav>
-        <div class="scroll-indicator"></div>
     </header>
     <section id="intro">
         <div class="pres-profil">
@@ -161,31 +161,127 @@
         <div class="gallery">
             <div class="gallery-item">
             <img data-gallery-tag="Html&Css" src="./Frontend/assets/images/booki.webp" alt="Booki" loading="lazy">
-            <div class="overlay">
-                <p>BOOKI</p>
-                <button>Voir plus</button>
-            </div>
+                <div class="overlay">
+                    <p>BOOKI</p>
+                    <button>Voir plus</button>
+                </div>
             </div>
             <div class="gallery-item">
             <img data-gallery-tag="JavaScript" src="./Frontend/assets/images/sophie-bluel.webp" alt="SophieBluel" loading="lazy">
-            <div class="overlay">
-                <p>Sophie Bluel</p>
-                <button>Voir plus</button>
-            </div>
+                <div class="overlay">
+                    <p>Sophie Bluel</p>
+                    <button>Voir plus</button>
+                </div>
             </div>
             <div class="gallery-item">
             <img data-gallery-tag="JavaScript Html&Css" src="./Frontend/assets/images/carducci.webp" alt="Carducci" loading="lazy">
-            <div class="overlay">
-                <p>Nina Carducci</p>
-                <button>Voir plus</button>
-            </div>
+                <div class="overlay">
+                    <p>Nina Carducci</p>
+                    <button>Voir plus</button>
+                </div>
             </div>
             <div class="gallery-item">
             <img data-gallery-tag="React" src="./Frontend/assets/images/kasa.webp" alt="Kasa" loading="lazy">
-            <div class="overlay">
-                <p>KASA</p>
-                <button>Voir plus</button>
+                <div class="overlay">
+                    <p>KASA</p>
+                    <button>Voir plus</button>
+                </div>
             </div>
+        </div>
+        <div id="modal-booki" class="modal">
+        <div class="overlay-modal"></div>
+            <div class="modal-container">
+                <div class="close-modal">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-presentation">
+                        <div class="modal-image">
+                            <img src="./Frontend/assets/images/booki.webp" alt="booki">
+                        </div>
+                        <div class="modal-presentation">
+                            <span>Booki</span>
+                            <h4>
+                                Année :
+                                <span>2022</span>
+                            </h4>
+                            <h4>Mission :</h4>
+                            <p>Charger d'intégrer l'interface du site en utilisant HTML et CSS. L'objectif ici était que le site soit le plus ergonomique possible en format desktop mais aussi au format responsive.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-sophie" class="modal">
+        <div class="overlay-modal"></div>
+            <div class="modal-container">
+                <div class="close-modal">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-presentation">
+                        <div class="modal-image">
+                            <img src="./Frontend/assets/images/sophie-bluel.webp" alt="bluel">
+                        </div>
+                        <div class="modal-presentation">
+                            <span>Sophie Bluel</span>
+                            <h4>
+                                Année :
+                                <span>2023</span>
+                            </h4>
+                            <h4>Mission :</h4>
+                            <p>Débuggez et optimiser le site d'une photographe selon ses demandes afin de lui fournir un rapport détaillé.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-nina" class="modal">
+        <div class="overlay-modal"></div>
+            <div class="modal-container">
+                <div class="close-modal">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-presentation">
+                        <div class="modal-image">
+                            <img src="./Frontend/assets/images/carducci.webp" alt="carducci">
+                        </div>
+                        <div class="modal-presentation">
+                            <span>Nina Carducci</span>
+                            <h4>
+                                Année :
+                                <span>2023</span>
+                            </h4>
+                            <h4>Mission :</h4>
+                            <p>Conception d'un portfolio d'une architecte d'intérieur. L'objectif ici était notamment de réaliser une page de connexion fonctionnelle et d'importer des images grâce à une API.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-kasa" class="modal">
+        <div class="overlay-modal"></div>       
+            <div class="modal-container">
+                <div class="close-modal">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-presentation">
+                        <div class="modal-image">
+                            <img src="./Frontend/assets/images/kasa.webp" alt="kasa">
+                        </div>
+                        <div class="modal-presentation">
+                            <span>Kasa</span>
+                            <h4>
+                                Année :
+                                <span>2023</span>
+                            </h4>
+                            <h4>Mission :</h4>
+                            <p>Développer une plateforme en ligne de location immobilière en utilisant la bibliothèque React, tout en veillant à respecter les directives techniques énoncées (à savoir utiliser SASS et mettre en place une animation CSS) afin d'améliorer l'ergonomie et l'intéraction utilisateur.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
