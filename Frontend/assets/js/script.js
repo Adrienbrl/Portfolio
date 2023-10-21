@@ -95,4 +95,55 @@ toggle.addEventListener('click', () => {
   shareBtn.classList.toggle('active');
 });
 
+const btn = document.querySelector('.to-the-top');
+
+btn.addEventListener('click', () => {
+
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  })
+})
+
+
+    // Sélectionnez tous les boutons "Voir plus"
+    const viewMoreButtons = document.querySelectorAll('.gallery-item button');
+
+    // Ajoutez un gestionnaire d'événements à chaque bouton
+    viewMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Récupérez l'élément parent .gallery-item
+            const galleryItem = button.closest('.gallery-item');
+
+            // Récupérez l'attribut data-gallery-tag de l'image
+            const galleryTag = galleryItem.querySelector('img').getAttribute('data-gallery-tag');
+
+            // En fonction de la valeur de data-gallery-tag, affichez la modale appropriée
+            if (galleryTag === 'Html&Css') {
+                document.getElementById('modal-booki').style.display = 'block';
+            } else if (galleryTag === 'JavaScript') {
+                document.getElementById('modal-sophie').style.display = 'block';
+            } else if (galleryTag === 'JavaScript Html&Css') {
+                document.getElementById('modal-nina').style.display = 'block';
+            } else if (galleryTag === 'React') {
+                document.getElementById('modal-kasa').style.display = 'block';
+            }
+        });
+    });
+
+    // Gérez la fermeture des modales en ajoutant un gestionnaire d'événements pour les boutons "Fermer"
+    const closeButtons = document.querySelectorAll('.close-modal');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Masquez la modale actuelle
+            button.closest('.modal').style.display = 'none';
+        });
+    });
+
+
+
+
+
+
 

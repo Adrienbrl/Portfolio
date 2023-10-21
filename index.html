@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <div class="scroll-indicator"></div>
     <header>
         <a class="logo" href="./index.html"><img src="./Frontend/assets/images/avatar.webp" alt="Avatar"></a>
         <nav>
@@ -26,8 +27,7 @@
             <a href="#projets" class="nav-item" data-active-color="rgb(96, 66, 118)" data-target="Projets">Projets</a>
             <a href="#contact" class="nav-item" data-active-color="rgb(70, 51, 21)" data-target="Me contacter">Me contacter</a>
             <span class="nav-indicator"></span>
-          </nav>
-          <div class="scroll-indicator"></div>
+        </nav>
     </header>
     <section id="intro">
         <div class="pres-profil">
@@ -161,42 +161,188 @@
         <div class="gallery">
             <div class="gallery-item">
             <img data-gallery-tag="Html&Css" src="./Frontend/assets/images/booki.webp" alt="Booki" loading="lazy">
-            <div class="overlay">
-                <p>BOOKI</p>
-                <button>Voir plus</button>
-            </div>
+                <div class="overlay">
+                    <p>BOOKI</p>
+                    <button>Voir plus</button>
+                </div>
             </div>
             <div class="gallery-item">
             <img data-gallery-tag="JavaScript" src="./Frontend/assets/images/sophie-bluel.webp" alt="SophieBluel" loading="lazy">
-            <div class="overlay">
-                <p>Sophie Bluel</p>
-                <button>Voir plus</button>
-            </div>
+                <div class="overlay">
+                    <p>Sophie Bluel</p>
+                    <button>Voir plus</button>
+                </div>
             </div>
             <div class="gallery-item">
             <img data-gallery-tag="JavaScript Html&Css" src="./Frontend/assets/images/carducci.webp" alt="Carducci" loading="lazy">
-            <div class="overlay">
-                <p>Nina Carducci</p>
-                <button>Voir plus</button>
-            </div>
+                <div class="overlay">
+                    <p>Nina Carducci</p>
+                    <button>Voir plus</button>
+                </div>
             </div>
             <div class="gallery-item">
             <img data-gallery-tag="React" src="./Frontend/assets/images/kasa.webp" alt="Kasa" loading="lazy">
-            <div class="overlay">
-                <p>KASA</p>
-                <button>Voir plus</button>
+                <div class="overlay">
+                    <p>KASA</p>
+                    <button>Voir plus</button>
+                </div>
             </div>
+        </div>
+        <div id="modal-booki" class="modal">
+        <div class="overlay-modal"></div>
+            <div class="modal-container">
+                <div class="close-modal">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-global">
+                        <div class="modal-image">
+                            <img src="./Frontend/assets/images/booki.webp" alt="booki">
+                        </div>
+                        <div class="modal-presentation">
+                            <span>Booki</span>
+                            <h4>
+                                Année :
+                                <span>2022</span>
+                            </h4>
+                            <h4>Mission :</h4>
+                            <p>Charger d'intégrer l'interface du site en utilisant HTML et CSS. L'objectif ici était que le site soit le plus ergonomique possible en format desktop mais aussi au format responsive.</p>
+                            <h4>Réalisations :</h4>
+                            <ul class="realisation">
+                                <li>Grâce aux maquettes Figma données par l'agence de voyage Booki j'ai pu intégrer parfaitement ce qui a été demandé. Le site est fonctionnel en version bureau et également pour mobile et tablette.</li>
+                                <li>En utilisant Git et GitHub j'ai pu versionné mon projet du début à la fin de sa conception. Ce qui m'a permis d'avoir une gestion plus efficace lors de mon travail.</li>
+                            </ul>
+                            <h4>Technologies utilisées :</h4>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <button>Visiter le site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-sophie" class="modal">
+        <div class="overlay-modal"></div>
+            <div class="modal-container">
+                <div class="close-modal">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-global">
+                        <div class="modal-image">
+                            <img src="./Frontend/assets/images/sophie-bluel.webp" alt="bluel">
+                        </div>
+                        <div class="modal-presentation">
+                            <span>Sophie Bluel</span>
+                            <h4>
+                                Année :
+                                <span>2023</span>
+                            </h4>
+                            <h4>Mission :</h4>
+                            <p>Conception d'un portfolio d'une architecte d'intérieur. L'objectif ici était notamment de réaliser une page de connexion fonctionnelle et d'importer des images grâce à une API.</p>
+                            <h4>Réalisations :</h4>
+                            <ul class="realisation">
+                                <li>Réalisation de la page de présentation des travaux à partir du code HTML qui était fourni. J'ai réussi à afficher les travaux de l'architecte grâce à une API.</li>
+                                <li>Application de la page de connexion de l'administrateur du site afin qu'elle puisse se connecter pour effectuer des changements sur sa page principal.</li>
+                                <li>Accomplissement de la modale permettant d'uploader de nouveaux médias à son portfolio.</li>
+                            </ul>
+                            <h4>Technologies utilisées :</h4>
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <button>Visiter le site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-nina" class="modal">
+        <div class="overlay-modal"></div>
+            <div class="modal-container">
+                <div class="close-modal">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-global">
+                        <div class="modal-image">
+                            <img src="./Frontend/assets/images/carducci.webp" alt="carducci">
+                        </div>
+                        <div class="modal-presentation">
+                            <span>Nina Carducci</span>
+                            <h4>
+                                Année :
+                                <span>2023</span>
+                            </h4>
+                            <h4>Mission :</h4>
+                            <p>Débuggez et optimiser le site d'une photographe selon ses demandes afin de lui fournir un rapport détaillé.</p>
+                            <h4>Réalisations :</h4>
+                            <ul class="realisation">
+                                <li>Dans un premier temps je me suis occupé de la partie débogage et optimisation. Pour ce faire j'ai utilisé l'extension Wave afin d'évaluer les problèmes. J'ai donc redimensionné les images et corrigé les erreurs affichées par les extensions Lighthouse et Wave.</li>
+                                <li>Dans un second temps je me suis occupé du SEO. Afin de l'améliorer j'ai mis en place un référencement local en utilisant Schema.org et en intégrant les balises métas pour les réseaux sociaux.</li>
+                                <li>En dernier lieu je me suis chargé de l'accessibilité du site en changeant notamment les couleurs qui n'avaient pas assez de contraste et des éléments qui étaient sans attributs.</li>
+                            </ul>
+                            <h4>Technologies utilisées :</h4>
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Wave</li>
+                                <li>Lighthouse</li>
+                            </ul>
+                            <button>Visiter le site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-kasa" class="modal">
+        <div class="overlay-modal"></div>       
+            <div class="modal-container">
+                <div class="close-modal">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-global">
+                        <div class="modal-image">
+                            <img src="./Frontend/assets/images/kasa.webp" alt="kasa">
+                        </div>
+                        <div class="modal-presentation">
+                            <span>Kasa</span>
+                            <h4>
+                                Année :
+                                <span>2023</span>
+                            </h4>
+                            <h4>Mission :</h4>
+                            <p>Développer une plateforme en ligne de location immobilière en utilisant la bibliothèque React, tout en veillant à respecter les directives techniques énoncées (à savoir utiliser SASS et mettre en place une animation CSS) afin d'améliorer l'ergonomie et l'intéraction utilisateur.</p>
+                            <h4>Réalisations :</h4>
+                            <ul class="realisation">
+                                <li>Développement de l'ensemble de l'application des composants React, aux routes React Router en suivant les maquettes données tant bien au format desktop qu'en responsive.</li>
+                                <li>Mise en place d'une animation CSS sur l'ouverture / fermeture du composant collapse pour une meilleure expèrience utilisateur.</li>
+                            </ul>
+                            <h4>Technologies utilisées :</h4>
+                            <ul>
+                                <li>React</li>
+                                <li>SASS</li>
+                            </ul>
+                            <button>Visiter le site</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section id="contact">
         <h2>Contactez-moi</h2>
-        <p>N'hésitez pas à m'écrire via ce formulaire ou bien par <a href="#">mail</a></p>
+        <p>N'hésitez pas à m'écrire en passant par ce formulaire ou si vous préférez par <a href="mailto:bruel.adrienpro@gmail.com">mail</a></p>
         <div class="contact-container">
             <div class="contact-illustration">
                 <img src="./Frontend/assets/images/boite_aux_lettres_illu.webp" alt="Boîte aux lettres">
             </div>
-            <form class="formulaire" action="#contact" method="post">
+            <form class="formulaire" name="contact" method="POST">
                 <div class="name-container">
                     <div class="name-input">
                         <label for="lastname">Nom</label>
@@ -214,11 +360,11 @@
                     </div>
                     <div>
                         <label for="subject">Sujet 📝</label>
-                        <input required type="text" placeholder="Votre sujet">
+                        <input required type="text" placeholder="Intitulé de votre sujet">
                     </div>
                     <div>
                         <label for="message">Message 📩</label>
-                        <textarea required name="message" id="message" placeholder="Ecrivez votre message"></textarea>
+                        <textarea required name="message" id="message" placeholder="Votre message"></textarea>
                     </div>
                 </div>
                 <button class="submit" type="submit">Envoyer<i class="fa-solid fa-paper-plane"></i></button>
@@ -227,21 +373,20 @@
     </section>
     <div class="share">
         <ol>
-          <li><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-github fa-2x"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-linkedin-in fa-2x"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-discord fa-2x"></i></a></li>
+        <li><a href="https://github.com/Adrienbrl" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a></li>
+        <li><a href="https://www.instagram.com/ad.ashura/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/adrien-bruel-659b83292/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-discord fa-2x"></i></a></li>
         </ol>
         <div class="toggle"></div>
-      </div>
+    </div>
+    <div class="to-the-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
     <footer>
-        <div class="footer-nav">
-            <a href="#about" class="nav-item is-active" data-active-color="rgb(96, 66, 118)" data-target="À propos">À propos</a>
-            <a href="#competences" class="nav-item" data-active-color="rgb(70, 51, 21)" data-target="Compétences">Compétences</a>
-            <a href="#projets" class="nav-item" data-active-color="rgb(96, 66, 118)" data-target="Projets">Projets</a>
-            <span class="nav-indicator"></span>
-        </div>
+        <p>Make with 💜 and passion</p>
         <span>© 2023 - Développer par BRUEL Adrien</span>
     </footer>
+    
 </body>
 </html> 
