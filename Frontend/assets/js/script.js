@@ -91,7 +91,7 @@ viewMoreButtons.forEach(button => {
         } else if (galleryTag === 'Front Optimisation') {
             document.getElementById('modal-nina').classList.add("modal-active");
             document.body.classList.add("modal-open");
-        } else if (galleryTag === 'Front') {
+        } else if (galleryTag === 'Front Kasa') {
             document.getElementById('modal-kasa').classList.add("modal-active");
             document.body.classList.add("modal-open");
         }
