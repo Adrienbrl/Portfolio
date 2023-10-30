@@ -19,6 +19,10 @@ body, header {
     min-width: 340px;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -94,18 +98,6 @@ nav {
     border-radius: 30px;
 }
 
-.scroll-indicator {
-    position: fixed;
-    top: 0;
-    width: 96.8%;
-    height: 3px;
-    transform-origin: left;
-    transform: scaleX(0);
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(95, 81, 219));
-    transition: transform 0.2s ease-out;
-    z-index: 5;
-}
-
 /* ----------- HEADER OFF ----------- */
 
 /* ----------- INTRO ----------- */
@@ -127,72 +119,11 @@ nav {
     width: 60%;
 }
 
-/* ----------- ANIMATION TITRE ----------- */
-
 .pres h1 {
-    text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     color: rgb(22, 17, 12);
-    color: transparent;
-    font-size: 0px;
-}
-
-.pres h1 span {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
     font-size: 40px;
-    color: rgb(22, 17, 12);
 }
-
-h1 span::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-}
-
-.pres h1:nth-child(1) {
-    animation: txt-appearance 0s 1s forwards;
-}
-
-.pres h1:nth-child(2) {
-    animation: txt-appearance 0s 1.25s forwards;
-}
-
-.pres h1:nth-child(1) span::after {
-    background: rgb(95, 81, 219);
-    animation: slide-in 0.75s ease-out forwards, slide-out 0.75s 1s ease-out forwards;
-}
-
-.pres h1:nth-child(2) span::after {
-    background: rgb(96, 66, 118);
-    animation: slide-in 0.75s 0.3s ease-out forwards, slide-out 0.75s 1.3s ease-out forwards;
-}
-
-@keyframes slide-in {
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-@keyframes slide-out {
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-@keyframes txt-appearance {
-    100% {
-        color: rgb(22, 17, 12);
-    }
-}
-
-/* ----------- ANIMATION TITRE OFF ----------- */
 
 .pres p {
     font-size: 18px;
@@ -274,13 +205,6 @@ h1 span::after {
 #competences h2 {
     font-size: 35px;
     font-family: 'Montserrat', sans-serif;
-    color: rgb(22, 17, 12);
-}
-
-#competences p {
-    font-size: 16px;
-    font-family: 'Lato', sans-serif;
-    margin-top: 1vw;
     color: rgb(22, 17, 12);
 }
 
@@ -406,10 +330,7 @@ h1 span::after {
 }
 
 .gallery img {
-    max-width: 100%;
-    height: auto; 
-    object-fit: cover;
-    cursor: pointer;
+    width: 100%;
 }
 
 .gallery-item:hover {
@@ -468,6 +389,11 @@ h1 span::after {
     width: 100%;
     height: 100%;
     z-index: 7;
+    display: none;
+}
+
+.modal-active {
+    display: block;
 }
 
 .overlay-modal {
@@ -510,19 +436,106 @@ h1 span::after {
     display: flex;
 }
 
-/* .modal-presentation {
-
-} */
-
-.modal-image {
+.modal-template {
     width: 50%;
+    margin-inline: 20px;
 }
 
-.modal-image img {
+.modal-template img {
     width: 100%;
+    border-radius: 30px;
+    border: 1px solid rgb(95, 81, 219);
+    box-shadow: 0px 0px 20px rgba(95, 81, 219, 0.7);
 }
 
+.modal-presentation {
+    width: 50%;
+    margin: 0 30px 40px 5px;
+} 
 
+.modal-presentation h3 {
+    font-size: 25px;
+    margin-bottom: 1vw;
+    font-family: 'Lato', sans-serif;
+    color: rgb(95, 81, 219);
+}
+
+.modal-presentation h4 {
+    font-size: 18px;
+    margin-top: 1vw;
+    font-family: 'Lato', sans-serif;
+}
+
+.modal-presentation h4 span {
+    font-family: 'Lato', sans-serif;
+    color: #7a7a7a;
+    font-weight: 400;
+}
+
+.modal-presentation p, .realisation li {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+    margin-top: 1vw;
+    color: #7a7a7a;
+}
+
+.modal-presentation .realisation {
+    list-style: circle;
+    margin-left: 1vw;
+    display: block;
+    font-family: 'Lato', sans-serif;
+}
+
+.modal-presentation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+}
+
+.modal-presentation li {
+    margin: 20px 10px 20px 0;
+}
+
+.modal-tag {
+    padding: 4px 12px;
+    border: 1px solid rgb(95, 81, 219);
+    border-radius: 30px;
+    font-size: 14px;
+    color: rgb(95, 81, 219);
+}
+
+.modal-tag i {
+    padding-right: 5px;
+}
+
+.modal-visite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-visite button {
+    border: 1px solid rgb(95, 81, 219);
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    font-family: 'Lato', sans-serif;
+    background: rgb(95, 81, 219);
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease 0s;
+    margin-top: 1vw;
+    font-size: 16px;
+}
+
+.modal-visite button:hover {
+    background: rgba(75, 61, 199);
+    color: white;
+    transform: translateY(-7px);
+}
 
 /* ----------- MODALE OFF ----------- */
 
@@ -800,13 +813,47 @@ h1 span::after {
 
 footer {
     padding: 70px 65px 10px;
-    text-align: center; 
+    text-align: center;
 }
 
 footer span, footer p {
     font-family: 'Lato', sans-serif;
     padding: 10px;
-    font-size: 14px;
+}
+
+.reseaux-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.reseaux-footer a {
+    border: 1.5px solid rgb(95, 81, 219);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.reseaux-footer i {
+    color: rgb(95, 81, 219);
+    padding: 0;
+    font-size: 20px;
+}
+
+.reseaux-footer a:hover {
+    background: rgb(95, 81, 219);
+}
+
+.reseaux-footer a:hover i {
+    color: white;
 }
 
 

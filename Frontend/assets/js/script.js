@@ -56,38 +56,6 @@ items.forEach((item, index) => {
 });
 
 
-
-
-
-
-const scrollIndicator = document.querySelector(".scroll-indicator");
-const body = document.querySelector("body");
-
-const observer = new IntersectionObserver(handleIntersect)
-
-observer.observe(body)
-
-function handleIntersect(entries){
-  const el = entries[0];
-  if(el.isIntersecting){
-    window.addEventListener("scroll", indicatorAnimation)
-  } else if(!el.isIntersecting) {
-    window.removeEventListener("scroll", indicatorAnimation)
-  }
-}
-
-
-function indicatorAnimation() {
-
-  if(window.scrollY > body.offsetTop) {
-    const percentage = ((window.scrollY - body.offsetTop) / body.scrollHeight * 100).toFixed(2);
-    scrollIndicator.style.transform = `scaleX(${(percentage / 100)})`
-  } else {
-    scrollIndicator.style.transform = "scaleX(0)"
-  }
-}
-
-
 const toggle = document.querySelector('.toggle');
 
 toggle.addEventListener('click', () => {
@@ -107,43 +75,35 @@ btn.addEventListener('click', () => {
 })
 
 
-    // Sélectionnez tous les boutons "Voir plus"
-    const viewMoreButtons = document.querySelectorAll('.gallery-item button');
+const viewMoreButtons = document.querySelectorAll('.gallery-item button');
 
-    // Ajoutez un gestionnaire d'événements à chaque bouton
-    viewMoreButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Récupérez l'élément parent .gallery-item
-            const galleryItem = button.closest('.gallery-item');
+viewMoreButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const galleryItem = button.closest('.gallery-item');
+        const galleryTag = galleryItem.querySelector('img').getAttribute('data-gallery-tag');
 
-            // Récupérez l'attribut data-gallery-tag de l'image
-            const galleryTag = galleryItem.querySelector('img').getAttribute('data-gallery-tag');
-
-            // En fonction de la valeur de data-gallery-tag, affichez la modale appropriée
-            if (galleryTag === 'Html&Css') {
-                document.getElementById('modal-booki').style.display = 'block';
-            } else if (galleryTag === 'JavaScript') {
-                document.getElementById('modal-sophie').style.display = 'block';
-            } else if (galleryTag === 'JavaScript Html&Css') {
-                document.getElementById('modal-nina').style.display = 'block';
-            } else if (galleryTag === 'React') {
-                document.getElementById('modal-kasa').style.display = 'block';
-            }
-        });
+        if (galleryTag === 'Front') {
+            document.getElementById('modal-booki').classList.add("modal-active");
+            document.body.classList.add("modal-open");
+        } else if (galleryTag === 'Back') {
+            document.getElementById('modal-sophie').classList.add("modal-active");
+            document.body.classList.add("modal-open");
+        } else if (galleryTag === 'Front Optimisation') {
+            document.getElementById('modal-nina').classList.add("modal-active");
+            document.body.classList.add("modal-open");
+        } else if (galleryTag === 'Front') {
+            document.getElementById('modal-kasa').classList.add("modal-active");
+            document.body.classList.add("modal-open");
+        }
     });
+});
 
-    // Gérez la fermeture des modales en ajoutant un gestionnaire d'événements pour les boutons "Fermer"
-    const closeButtons = document.querySelectorAll('.close-modal');
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Masquez la modale actuelle
-            button.closest('.modal').style.display = 'none';
-        });
+const closeButtons = document.querySelectorAll('.close-modal');
+closeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        button.closest('.modal').classList.remove("modal-active");
+        document.body.classList.remove("modal-open");
     });
-
-
-
-
-
+});
 
 
