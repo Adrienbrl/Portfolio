@@ -98,6 +98,10 @@ nav {
     border-radius: 30px;
 }
 
+.curtain-menu {
+    display: none;
+}
+
 /* ----------- HEADER OFF ----------- */
 
 /* ----------- INTRO ----------- */
@@ -444,7 +448,6 @@ nav {
 .modal-template img {
     width: 100%;
     border-radius: 30px;
-    border: 1px solid rgb(95, 81, 219);
     box-shadow: 0px 0px 20px rgba(95, 81, 219, 0.7);
 }
 
@@ -612,7 +615,7 @@ nav {
     color: rgb(22, 17, 12);
 }
 
-.name-input input {
+.name-input input, .other-inputs input  {
     width: 100%;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
@@ -636,16 +639,6 @@ nav {
     padding-left: 10px;
     letter-spacing: 1px;
     color: rgb(22, 17, 12);
-}
-
-.other-inputs input {
-    width: 100%;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    border-radius: 30px;
-    border: 1px solid rgb(95, 81, 219);
-    padding: 15px;
-    margin-top: 10px;
 }
 
 .other-inputs textarea {
@@ -806,7 +799,6 @@ nav {
     font-size: 20px;
 }
 
-
 /* ----------- BOUTON TO THE TOP OFF ----------- */
 
 /* ----------- FOOTER ----------- */
@@ -855,6 +847,299 @@ footer span, footer p {
 .reseaux-footer a:hover i {
     color: white;
 }
+
+/* ----------- FOOTER OFF ----------- */
+
+/* ----------- RESPONSIVE TABLET ON ----------- */
+
+@media screen and (max-width:1170px) {
+
+    .nav-toggler {
+        position: fixed;
+        z-index: 10;
+        top: 15px;
+        right: 40px;
+        height: 50px;
+        width: 35px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+    }
+    .line {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: rgb(70, 51, 21);
+        transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+    }
+    .l1 {
+        transform: translateY(-10px);
+    }
+    .l3 {
+        transform: translateY(10px);
+    }
+    .nav-toggler.active .l1 {
+        transform: translateY(0px) rotate(45deg);
+    }
+    .nav-toggler.active .l2 {
+        opacity: 0;
+    }
+    .nav-toggler.active .l3 {
+        transform: translateY(0px) rotate(-45deg);
+    }
+    .curtain-menu {
+        position: fixed;
+        width: 100vw;
+        min-height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(70deg, rgb(95, 81, 219), rgb(254, 255, 208));
+        transform: translateY(-100%);
+        transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+        z-index: 3;
+    }
+    .curtain-menu.active {
+        transform: translate(0);
+    }
+    .curtain-menu a {
+        font-family: 'Lato', sans-serif;
+        color: rgb(70, 51, 21);
+        font-size: 20px;
+        margin: 10px 0;
+        text-decoration: none;
+    }
+    nav {
+        display: none;
+    }
+    .share {
+        display: none;
+    }
+    .reseaux-footer{
+        display: flex;
+    }
+    .curtain-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(39, 39, 39, 0.5);
+        z-index: 1; 
+    }
+    .filters ul {
+        gap: 50px;
+        padding: 5px;
+    }
+    .modal-global {
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-template {
+        width: 90%;
+    }
+    .modal-presentation {
+        width: 90%;
+        margin: 0;
+    }
+    .modal-presentation h3 {
+        text-align: center;
+        margin-top: 2vw;
+    }
+    .langage-card div, .outil-card i {
+        font-size: 25px;
+    }
+    .to-the-top {
+        right: 45px;
+    }
+    .profil {
+        width: 30%;
+    }
+    .contact-illustration {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .langage-outil {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .outil {
+        margin-top: 5vw;
+    }
+    .langage, .outil {
+        width: 70%;
+    }
+}
+
+/* ----------- RESPONSIVE TABLET OFF ----------- */
+
+/* ----------- RESPONSIVE MOBILE ON ----------- */
+
+@media screen and (max-width:800px) {
+    header .logo {
+        width: 40px;
+    }
+    .pres-profil {
+        flex-direction: column;
+    }
+    .pres {
+        width: 75%;
+        text-align: center;
+    }
+    .pres h1 {
+        font-size: 6.5vw;
+    }
+    .pres p {
+        margin-bottom: 2vw;
+        text-align: center;
+        font-size: 3vw;
+    }
+    .profil {
+        width: 50%;
+    }
+    .reseaux {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .reseaux p {
+        font-size: 3vw;
+    }
+    .reseaux i {
+        padding: 10px;
+        font-size: 4vw;
+    }
+    #about h2 {
+        font-size: 5.5vw;
+        margin-bottom: 4vw;
+    }
+    .about-txt {
+        font-size: 3vw;
+    }
+    #competences h2 {
+        font-size: 5.5vw;
+        margin-bottom: 4vw;
+    }
+    .langage h3, .outil h3 {
+        font-size: 4vw;
+    }
+    .langage-card h4, .outil-card h4 {
+        font-size: 2.5vw;
+    }
+    .langage-container, .outil-container {
+        grid-template-columns: 1fr;
+    }
+    .circle-icon {
+        background: transparent;
+    }
+    .circle-icon i {
+        font-size: 3.5vw;
+    }
+    #projets h2 {
+        margin-bottom: 40px;
+        font-size: 5.5vw;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .filters ul {
+        width: 100%;
+        border: none;
+        flex-flow: column;
+    }
+    .filters li {
+        width: 100%;
+        border: 1px solid rgb(95, 81, 219);
+        border-radius: 30px;
+        text-align: center;
+        padding: 7px 6px;
+        margin-top: -40px;
+    }
+    .modal-presentation h3 {
+        font-size: 4vw;
+    }
+    .modal-presentation h4 {
+        font-size: 2.5vw;
+    }
+    .modal-presentation p, .realisation li {
+        font-size: 3vw;
+    }
+    .modal-presentation ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+    }
+    .modal-presentation li {
+        margin: 2vw;
+    }
+    .modal-tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+        width: 100%;
+    }
+    .modal-visite button {
+        font-size: 2.5vw;
+        width: 100%;
+    }
+    #contact h2 {
+        font-size: 5.5vw;
+    }
+    #contact p {
+        font-size: 3vw;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-illustration {
+        margin-bottom: 2vw;
+    }
+    .formulaire {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+    .name-container {
+        flex-flow: column;
+        gap: 7px;
+    }
+    .name-input {
+        width: 100%;
+    }
+    .name-input label, .other-inputs label {
+        font-size: 2.8vw;
+    } 
+    .name-input input, .other-inputs input {
+        font-size: 2vw;
+        margin-top: 1vw;
+    } 
+    .other-inputs textarea {
+        height: 25vw;
+        font-size: 2vw;
+    }
+    .submit {
+        width: 100%;
+    }
+    .to-the-top {
+        display: none;
+    }
+}
+
+/* ----------- RESPONSIVE MOBILE OFF ----------- */
+
 
 
 

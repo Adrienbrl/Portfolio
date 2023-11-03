@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <!-- HEADER ON -->
     <header>
         <a class="logo" href="./index.html"><img src="./Frontend/assets/images/avatar.webp" alt="Avatar"></a>
         <nav>
@@ -29,6 +30,22 @@
             <span class="nav-indicator"></span>
         </nav>
     </header>
+    <!-- HEADER OFF -->
+    <!-- CURTAIN MENU ON -->
+    <nav class="curtain-menu">
+        <a href="#about">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Me contacter</a>
+    </nav>
+    <div class="curtain-overlay"></div>
+    <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
+        <span class="line l1"></span>
+        <span class="line l2"></span>
+        <span class="line l3"></span>
+    </button>
+    <!-- CURTAIN MENU OFF -->
+    <!-- PRESENTATION ON -->
     <section id="intro">
         <div class="pres-profil">
             <div class="pres">
@@ -49,6 +66,8 @@
             </ul>
         </div>
     </section>
+    <!-- PRESENTATION OFF -->
+    <!-- ABOUT ON -->
     <section id="about">
         <h2>À propos</h2>
         <div class="about-txt">
@@ -57,6 +76,8 @@
             <p> Les raisons pour lesquelles j'ai choisi le développement web ? Ce qui me passionne par-dessus tout dans ce métier, c'est la possibilité d'obtenir un retour instantané sur mon travail, de voir directement comment mon code prend vie sur une page web. J'adore <strong>concevoir, créer, innover</strong> et <strong>concrétiser</strong> des projets web.</p>
         </div>
     </section>
+    <!-- ABOUT OFF -->
+    <!-- COMPETENCES ON -->
     <section id="competences">
         <h2>Mes Compétences</h2>
         <div class="langage-outil">
@@ -144,6 +165,8 @@
             </div>
         </div>
     </section>
+    <!-- COMPETENCES OFF -->
+    <!-- PORJETS ON -->
     <section id="projets">
         <h2>Projets</h2>
         <div class="filters">
@@ -184,6 +207,7 @@
                 </div>
             </div>
         </div>
+        <!-- MODAL ON -->
         <div id="modal-booki" class="modal">
         <div class="overlay-modal"></div>
             <div class="modal-container">
@@ -335,7 +359,10 @@
                 </div>
             </div>
         </div>
+        <!-- MODAL OFF -->
     </section>
+    <!-- PROJETS OFF -->
+    <!-- CONTACT ON -->
     <section id="contact">
         <h2>Contactez-moi</h2>
         <p>N'hésitez pas à m'écrire en passant par ce formulaire ou si vous préférez par <a href="mailto:bruel.adrienpro@gmail.com">mail</a></p>
@@ -372,6 +399,8 @@
             </form>
         </div>
     </section>
+    <!-- CONTACT OFF -->
+    <!-- BUTTON SHARE ON -->
     <div class="share">
         <ol>
         <li><a href="https://github.com/Adrienbrl" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a></li>
@@ -381,9 +410,13 @@
         </ol>
         <div class="toggle"></div>
     </div>
+    <!-- BUTTON SHARE OFF -->
+    <!-- BUTTON TO THE TOP ON -->
     <div class="to-the-top">
         <i class="fa-solid fa-arrow-up"></i>
     </div>
+    <!-- BUTTON TO THE TOP OFF -->
+    <!-- FOOTER ON -->
     <footer>
         <p>Make with 💜 and passion</p>
         <div class="reseaux-footer">
@@ -394,5 +427,6 @@
         </div>
         <span>© 2023 - Développé par BRUEL Adrien</span>
     </footer>
+    <!-- FOOTER OFF -->
 </body>
 </html> 

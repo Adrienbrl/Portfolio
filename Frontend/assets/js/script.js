@@ -1,4 +1,5 @@
-const filtersGallery = document.querySelectorAll("#projets ul li");
+// FILTRAGE DES FILTRES PROJETS ON 
+const filtersGallery = document.querySelectorAll(".filters ul li");
 const imageGallery = document.querySelectorAll("#projets .gallery img");
 const all = document.querySelector(".all");
 
@@ -19,7 +20,7 @@ for (let filter of filtersGallery) {
         }
     });
 }
-
+// FILTRAGE DES FILTRES PROJETS OFF
 
 
 
@@ -55,14 +56,16 @@ items.forEach((item, index) => {
   item.classList.contains('is-active') && handleIndicator(item);
 });
 
-
+// BUTTON SHARE ON
 const toggle = document.querySelector('.toggle');
 
 toggle.addEventListener('click', () => {
   const shareBtn = document.querySelector('.share');
   shareBtn.classList.toggle('active');
 });
+// BUTTON SHARE OFF
 
+// BUTTON TO THE TOP ON
 const btn = document.querySelector('.to-the-top');
 
 btn.addEventListener('click', () => {
@@ -73,8 +76,9 @@ btn.addEventListener('click', () => {
     behavior: "smooth"
   })
 })
+// BUTTON TO THE TOP OFF
 
-
+// MODAL DES PROJETS ON
 const viewMoreButtons = document.querySelectorAll('.gallery-item button');
 
 viewMoreButtons.forEach(button => {
@@ -105,5 +109,35 @@ closeButtons.forEach(button => {
         document.body.classList.remove("modal-open");
     });
 });
+// MODAL DES PROJETS OFF
+
+// CURTAIN MENU
+const curtainButton = document.querySelector(".nav-toggler")
+const navigation = document.querySelector(".curtain-menu")
+const navLinks = navigation.querySelectorAll("a");
+const curtainOverlay = document.querySelector(".curtain-overlay");
+
+curtainButton.addEventListener("click", toggleNav)
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    curtainButton.classList.remove("active");
+    navigation.classList.remove("active");
+    curtainOverlay.style.display = curtainOverlay.style.display === "none" ? "block" : "none";
+  });
+});
+
+function toggleNav(){
+  curtainButton.classList.toggle("active")
+  navigation.classList.toggle("active")
+  curtainOverlay.style.display = curtainOverlay.style.display === "block" ? "none" : "block";
+}
+
+curtainOverlay.addEventListener("click", () => {
+  curtainButton.classList.remove("active");
+  navigation.classList.remove("active");
+  curtainOverlay.style.display = "none";
+});
+// CURTAIN MENU OFF
 
 
