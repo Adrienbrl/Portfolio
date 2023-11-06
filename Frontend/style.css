@@ -514,27 +514,29 @@ nav {
     padding-right: 5px;
 }
 
-.modal-visite {
+.modal-visite-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    margin-top: 1vw;
 }
 
-.modal-visite button {
+.modal-visite {
     border: 1px solid rgb(95, 81, 219);
     border-radius: 30px;
-    color: rgb(255, 255, 255);
     padding: 12px;
     font-family: 'Lato', sans-serif;
     background: rgb(95, 81, 219);
     cursor: pointer;
     letter-spacing: 1px;
     transition: all 0.3s ease 0s;
-    margin-top: 1vw;
-    font-size: 16px;
+    text-decoration: none;
+    color: #f1f1f1;
+    width: 30%;
+    text-align: center;
 }
 
-.modal-visite button:hover {
+.modal-visite:hover {
     background: rgba(75, 61, 199);
     color: white;
     transform: translateY(-7px);
@@ -997,12 +999,12 @@ footer span, footer p {
         text-align: center;
     }
     .pres h1 {
-        font-size: 6.5vw;
+        font-size: 7.5vw;
     }
     .pres p {
         margin-bottom: 2vw;
         text-align: center;
-        font-size: 3vw;
+        font-size: 4vw;
     }
     .profil {
         width: 50%;
@@ -1014,28 +1016,29 @@ footer span, footer p {
         align-items: center;
     }
     .reseaux p {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     .reseaux i {
         padding: 10px;
         font-size: 4vw;
     }
     #about h2 {
-        font-size: 5.5vw;
+        font-size: 6.5vw;
         margin-bottom: 4vw;
     }
     .about-txt {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     #competences h2 {
-        font-size: 5.5vw;
+        font-size: 6.5vw;
         margin-bottom: 4vw;
     }
     .langage h3, .outil h3 {
-        font-size: 4vw;
+        font-size: 5vw;
+        margin-top: 5vw;
     }
     .langage-card h4, .outil-card h4 {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
     }
     .langage-container, .outil-container {
         grid-template-columns: 1fr;
@@ -1048,10 +1051,13 @@ footer span, footer p {
     }
     #projets h2 {
         margin-bottom: 40px;
-        font-size: 5.5vw;
+        font-size: 6.5vw;
     }
     .gallery {
         grid-template-columns: 1fr;
+    }
+    .gallery-item {
+        margin-top: 3.5vw;
     }
     .filters ul {
         width: 100%;
@@ -1067,13 +1073,13 @@ footer span, footer p {
         margin-top: -40px;
     }
     .modal-presentation h3 {
-        font-size: 4vw;
+        font-size: 5vw;
     }
     .modal-presentation h4 {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
     }
     .modal-presentation p, .realisation li {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     .modal-presentation ul {
         display: grid;
@@ -1090,15 +1096,15 @@ footer span, footer p {
         font-size: 2vw;
         width: 100%;
     }
-    .modal-visite button {
+    .modal-visite {
         font-size: 2.5vw;
         width: 100%;
     }
     #contact h2 {
-        font-size: 5.5vw;
+        font-size: 6.5vw;
     }
     #contact p {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     .contact-container {
         flex-direction: column;
@@ -1132,6 +1138,7 @@ footer span, footer p {
     }
     .submit {
         width: 100%;
+        margin-top: 3.5vw;
     }
     .to-the-top {
         display: none;
