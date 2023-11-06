@@ -995,7 +995,7 @@ footer span, footer p {
         flex-direction: column;
     }
     .pres {
-        width: 75%;
+        width: 100%;
         text-align: center;
     }
     .pres h1 {
